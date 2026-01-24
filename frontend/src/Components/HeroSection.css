@@ -90,17 +90,20 @@
     color: #fff;
     font-family: var(--font-roman);
     font-size: clamp(3rem, 6vw, 5rem);
-    line-height: 1.1;
+    line-height: 1.15;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
-    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.08em;
+    font-weight: 400;
+    text-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
 }
 
 .gold-text {
     color: var(--color-accent);
+    font-family: var(--font-display);
     font-style: italic;
+    font-weight: 400;
     text-transform: none;
-    letter-spacing: 0;
+    letter-spacing: -0.01em;
 }
 
 /* ===== BOTTOM: CONCIERGE BAR - PREMIUM DESKTOP ===== */
@@ -197,63 +200,70 @@
 }
 
 /* ===================================
-   MOBILE - iPhone 15 (1179x2556)
-   YOUR APPROVED DESIGN - NOT TOUCHING
+   MOBILE - iPhone 12 Pro / 15 (390-393px logical)
+   Clean, Premium, Balanced
    =================================== */
 
 @media (max-width: 1200px) {
     .hero-layout-flex {
-        padding: 8vh 2rem 6vh !important;
+        padding: 6vh 1.5rem 4vh !important;
     }
 
+    /* BRAND NAME - Single line */
     .brand-name {
-        font-size: 2.5rem !important;
-        letter-spacing: 0.3em !important;
-        margin-bottom: 3rem !important;
+        font-size: 1.2rem !important;
+        letter-spacing: 0.35em !important;
+        margin-bottom: 1.5rem !important;
         font-weight: 700 !important;
         color: #fff !important;
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+        white-space: nowrap !important;
     }
 
+    /* HEADLINE - Clean, Premium */
     .hero-main-title {
-        font-size: 6rem !important;
-        line-height: 0.95 !important;
-        letter-spacing: 0.02em !important;
-        text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 10px 35px rgba(0, 0, 0, 0.3) !important;
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+        letter-spacing: 0.1em !important;
+        font-weight: 400 !important;
+        text-shadow: 0 3px 15px rgba(0, 0, 0, 0.4) !important;
     }
 
     .gold-text {
-        color: #F4E09E !important;
+        color: #D4AF37 !important;
         font-style: italic !important;
-        text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4), 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+        font-weight: 400 !important;
+        letter-spacing: 0 !important;
     }
 
+    /* BUTTONS - Touch friendly but not huge */
     .hero-actions {
         flex-direction: column !important;
-        gap: 1.5rem !important;
-        max-width: 400px !important;
+        gap: 1rem !important;
+        max-width: 280px !important;
         margin: 0 auto !important;
     }
 
     .hero-actions .btn {
-        padding: 2rem 3rem !important;
-        font-size: 1.8rem !important;
-        font-weight: 700 !important;
-        letter-spacing: 0.1em !important;
-        border-width: 2px !important;
+        padding: 1rem 2rem !important;
+        font-size: 0.85rem !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.15em !important;
+        border-width: 1px !important;
     }
 
+    /* LOCATION TEXT */
     .hero-location-text {
-        font-size: 2.2rem !important;
-        letter-spacing: 0.1em !important;
-        margin-top: 2.5rem !important;
-        font-weight: 700 !important;
-        opacity: 1 !important;
-        text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7), 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+        font-size: 0.7rem !important;
+        letter-spacing: 0.3em !important;
+        margin-top: 1.5rem !important;
+        font-weight: 600 !important;
+        opacity: 0.95 !important;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
         white-space: nowrap !important;
     }
 
     .hero-actions-container {
-        gap: 3rem !important;
+        gap: 1.5rem !important;
     }
 }
