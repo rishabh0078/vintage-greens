@@ -1,21 +1,27 @@
 import React from 'react';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 import './TestimonialSection.css';
 
 const TestimonialSection = () => {
+    const [sectionRef, isVisible] = useScrollAnimation();
+
     return (
         <section className="luxury-testimonial-section">
             <div className="testimonial-container-luxury">
-                <div className="testimonial-card-luxury">
+                <div
+                    ref={sectionRef}
+                    className={`testimonial-card-luxury scroll-animate ${isVisible ? 'is-visible' : ''}`}
+                >
                     <div className="testimonial-decorative-line"></div>
 
                     <div className="testimonial-quote-wrapper">
-                        <span className="luxury-quote-mark">“</span>
+                        <span className="luxury-quote-mark">"</span>
                         <blockquote className="luxury-testimonial-text">
                             Our celebration at Vintage Greens was a masterpiece of elegance.
                             From the awe-inspiring architecture to the seamless coordination,
                             every moment felt like a dream realized in the most majestic setting.
                         </blockquote>
-                        <span className="luxury-quote-mark bottom">”</span>
+                        <span className="luxury-quote-mark bottom">"</span>
                     </div>
 
                     <div className="testimonial-author-luxury">

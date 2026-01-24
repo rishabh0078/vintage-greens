@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 import './ContactSection.css';
 
 const ContactSection = () => {
+    const [formRef, isVisible] = useScrollAnimation();
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -43,7 +45,10 @@ const ContactSection = () => {
             <div className="contact-container">
                 <div className="contact-form-wrapper-centered">
                     {/* Inquiry Form */}
-                    <div className="inquiry-form-card-luxury">
+                    <div
+                        ref={formRef}
+                        className={`inquiry-form-card-luxury scroll-animate ${isVisible ? 'is-visible' : ''}`}
+                    >
                         <div className="form-header-luxury">
                             <h3>Inquire for Availability</h3>
                             <p>All fields marked with an asterisk are required for a curated response.</p>

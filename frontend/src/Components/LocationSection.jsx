@@ -1,11 +1,18 @@
 import React from 'react';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 import './LocationSection.css';
 
 const LocationSection = () => {
+    const [headerRef, headerVisible] = useScrollAnimation();
+    const [contentRef, contentVisible] = useScrollAnimation();
+
     return (
         <section className="luxury-location-section" id="location">
             <div className="location-container">
-                <div className="location-header-luxury">
+                <div
+                    ref={headerRef}
+                    className={`location-header-luxury scroll-animate ${headerVisible ? 'is-visible' : ''}`}
+                >
                     <span className="location-pretitle">OUR VINTAGE GREENS</span>
                     <h2 className="location-main-title">A Prime Destination</h2>
                     <div className="location-divider"></div>
@@ -14,7 +21,10 @@ const LocationSection = () => {
                     </p>
                 </div>
 
-                <div className="location-content-luxury">
+                <div
+                    ref={contentRef}
+                    className={`location-content-luxury scroll-animate ${contentVisible ? 'is-visible' : ''}`}
+                >
                     <div className="map-wrapper-luxury">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55360.15837814394!2d79.47584!3d29.21453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a09addbd0c86c7%3A0xb9d5e53c0ee9087e!2sHaldwani%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1234567890"

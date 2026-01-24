@@ -5,7 +5,6 @@ import TestimonialSection from './Components/TestimonialSection';
 import ContactSection from './Components/ContactSection';
 import LocationSection from './Components/LocationSection';
 import Footer from './Components/Footer';
-import FloatingWhatsApp from './Components/FloatingWhatsApp';
 import './App.css';
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
       <ContactSection />
       <LocationSection />
       <Footer />
-      <FloatingWhatsApp />
     </div>
   );
 }

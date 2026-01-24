@@ -1,10 +1,13 @@
 
 import React, { useState } from 'react';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 import './GallerySection.css';
 
 const GallerySection = () => {
     const [activeCategory, setActiveCategory] = useState('all');
-    const [visibleCount, setVisibleCount] = useState(2); // Show 2 images initially
+    const [visibleCount, setVisibleCount] = useState(3); // Show 3 images initially
+    const [headerRef, headerVisible] = useScrollAnimation();
+    const [gridRef, gridVisible] = useScrollAnimation();
 
     const categories = [
         { id: 'all', label: 'All Events' },
@@ -75,19 +78,22 @@ const GallerySection = () => {
 
     // Load more images
     const loadMore = () => {
-        setVisibleCount(prev => prev + 6);
+        setVisibleCount(prev => prev + 3);
     };
 
     // Reset visible count when category changes
     const handleCategoryChange = (categoryId) => {
         setActiveCategory(categoryId);
-        setVisibleCount(2); // Reset to show 2 images
+        setVisibleCount(3); // Reset to show 3 images
     };
 
     return (
         <section className="luxury-gallery-section" id="gallery">
             <div className="gallery-container">
-                <div className="gallery-header-luxury">
+                <div
+                    ref={headerRef}
+                    className={`gallery-header-luxury scroll-animate ${headerVisible ? 'is-visible' : ''}`}
+                >
                     <span className="gallery-pretitle">PORTFOLIO</span>
                     <h2 className="gallery-main-title">Moments defined by Elegance</h2>
                     <div className="gallery-divider"></div>
@@ -110,7 +116,10 @@ const GallerySection = () => {
                 </div>
 
                 {/* Gallery Grid */}
-                <div className="gallery-grid-luxury">
+                <div
+                    ref={gridRef}
+                    className={`gallery-grid-luxury scroll-animate ${gridVisible ? 'is-visible' : ''}`}
+                >
                     {visibleImages.map(image => (
                         <div key={image.id} className="gallery-item-luxury">
                             <div className="image-wrapper-luxury">

@@ -16,6 +16,8 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    overflow-x: hidden;
 }
 
 body {
@@ -86,6 +88,33 @@ body {
     --transition-fast: 150ms ease;
     --transition-base: 250ms ease;
     --transition-slow: 400ms ease;
+}
+
+/* ===================================
+   SCROLL ANIMATIONS - Fade In + Slide Up
+   =================================== */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays for child elements */
+.scroll-animate.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.scroll-animate.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.scroll-animate.delay-3 {
+    transition-delay: 0.3s;
 }
 
 /* ===================================

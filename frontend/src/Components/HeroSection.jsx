@@ -15,12 +15,12 @@ const HeroSection = () => {
 
             <div className="hero-content">
                 <div className="container hero-layout-flex">
-                    {/* SKY ZONE: Utilizes the empty sky above the building */}
+                    {/* SKY ZONE */}
                     <div className="hero-sky-zone reveal-item">
                         <span className="brand-name">VINTAGE GREENS</span>
                         <h1 className="hero-main-title">
-                            Where Moments Become <br />
-                            <span className="gold-text">Timeless Memories</span>
+                            Where Moments<br />
+                            Become <span className="gold-text">Timeless</span>
                         </h1>
                     </div>
 
