@@ -4,55 +4,55 @@ import './FeaturesSection.css';
 const FeaturesSection = () => {
     const features = [
         {
-            icon: '✨',
-            title: 'Elegant Interiors',
-            description: 'Sophisticated décor and premium ambiance that elevates every celebration'
+            number: '01',
+            title: 'Majestic Grandeur',
+            description: 'A grand hall featuring 25-foot ceilings, crystal chandeliers, and artisanal marble flooring designed for celebrations of distinction.'
         },
         {
-            icon: '🍽️',
-            title: 'Customizable Catering',
-            description: 'Curated menus tailored to your preferences with expert culinary team'
+            number: '02',
+            title: 'Culinary Artistry',
+            description: 'Exquisite multi-cuisine menus curated by master chefs, offering a sophisticated gastronomic journey for your esteemed guests.'
         },
         {
-            icon: '🎯',
-            title: 'Professional Management',
-            description: 'Dedicated event coordinators ensuring flawless execution from start to finish'
+            number: '03',
+            title: 'Unrivaled Service',
+            description: 'Discrete yet attentive hospitality where every detail is meticulously managed by our professional event concierges.'
         },
         {
-            icon: '🚗',
-            title: 'Ample Parking',
-            description: 'Spacious parking facility for 200+ vehicles with valet service available'
+            number: '04',
+            title: 'The Royal Suite',
+            description: 'Luxuriously appointed bridal and guest suites providing a sanctuary of comfort and elegance amidst the festivities.'
         },
         {
-            icon: '📍',
-            title: 'Prime Location',
-            description: 'Centrally located with easy accessibility from all major areas'
+            number: '05',
+            title: 'Lush Surroundings',
+            description: 'Manicured lawns and architectural fountained courtyards that provide a breathtaking backdrop for timeless photography.'
         },
         {
-            icon: '💡',
-            title: 'Premium Lighting',
-            description: 'State-of-the-art lighting systems creating the perfect ambiance'
+            number: '06',
+            title: 'Perfect Logistics',
+            description: 'Seamless arrival experience with expansive private parking and professional valet services for your convenience.'
         }
     ];
 
     return (
-        <section className="features section">
-            <div className="container">
-                <div className="section-header">
-                    <h2 className="section-title">Why Choose Vintage Greens</h2>
-                    <p className="section-subtitle">
-                        Every detail designed to make your event unforgettable
+        <section className="features-section">
+            <div className="features-container">
+                <div className="features-header">
+                    <span className="features-pretitle">THE EXPERIENCE</span>
+                    <h2 className="features-main-title">Crafting Grandeur</h2>
+                    <div className="features-divider"></div>
+                    <p className="features-description">
+                        Where architectural majesty meets impeccable hospitality. We invite you to explore the elements that make Vintage Greens the region's most distinguished venue.
                     </p>
                 </div>
 
-                <div className="features-grid grid grid-3">
+                <div className="features-grid-luxury">
                     {features.map((feature, index) => (
-                        <div key={index} className="feature-card card">
-                            <div className="card-icon">
-                                <span>{feature.icon}</span>
-                            </div>
-                            <h3>{feature.title}</h3>
-                            <p>{feature.description}</p>
+                        <div key={index} className="feature-item-luxury">
+                            <div className="feature-number">{feature.number}</div>
+                            <h3 className="feature-title-luxury">{feature.title}</h3>
+                            <p className="feature-text-luxury">{feature.description}</p>
                         </div>
                     ))}
                 </div>

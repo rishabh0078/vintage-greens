@@ -9,15 +9,15 @@
     z-index: 1000;
     width: 60px;
     height: 60px;
-    background: #25D366;
+    background: var(--color-accent);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 4px 12px rgba(197, 160, 89, 0.4);
     cursor: pointer;
     transition: all var(--transition-base);
-    animation: pulse 2s infinite;
+    animation: goldPulse 2s infinite;
     text-decoration: none;
 }
 
@@ -64,16 +64,16 @@
     opacity: 1;
 }
 
-/* Pulse Animation */
-@keyframes pulse {
+/* Gold Pulse Animation */
+@keyframes goldPulse {
 
     0%,
     100% {
-        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+        box-shadow: 0 4px 12px rgba(197, 160, 89, 0.4);
     }
 
     50% {
-        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7), 0 0 0 10px rgba(37, 211, 102, 0.1);
+        box-shadow: 0 4px 20px rgba(197, 160, 89, 0.7), 0 0 0 10px rgba(197, 160, 89, 0.1);
     }
 }
 

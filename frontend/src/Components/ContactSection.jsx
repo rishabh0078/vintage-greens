@@ -22,11 +22,9 @@ const ContactSection = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // TODO: Connect to backend API
         console.log('Form submitted:', formData);
         setSubmitted(true);
 
-        // Reset form after 3 seconds
         setTimeout(() => {
             setSubmitted(false);
             setFormData({
@@ -41,150 +39,84 @@ const ContactSection = () => {
     };
 
     return (
-        <section id="contact" className="contact section">
-            <div className="container">
-                <div className="contact-wrapper">
-                    {/* Left Side - Contact Info */}
-                    <div className="contact-info">
-                        <h2>Get in Touch</h2>
-                        <p className="contact-description">
-                            Ready to host your dream event? Contact us today to check availability and discuss your requirements.
-                        </p>
-
-                        <div className="contact-details">
-                            <div className="contact-item">
-                                <div className="contact-icon">📞</div>
-                                <div>
-                                    <h4>Call Us</h4>
-                                    <a href="" className="contact-link">+91 XXXXXXXXXX</a>
-                                </div>
-                            </div>
-
-                            <div className="contact-item">
-                                <div className="contact-icon">💬</div>
-                                <div>
-                                    <h4>WhatsApp</h4>
-                                    <a href="" className="contact-link" target="_blank" rel="noopener noreferrer">
-                                        Chat with us
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div className="contact-item">
-                                <div className="contact-icon">📧</div>
-                                <div>
-                                    <h4>Email</h4>
-                                    <a href="mailto:info@vintagegreens.com" className="contact-link">info@vintagegreens.com</a>
-                                </div>
-                            </div>
-
-                            <div className="contact-item">
-                                <div className="contact-icon">📍</div>
-                                <div>
-                                    <h4>Location</h4>
-                                    <p className="contact-text">Haldwani, Uttarakhand 263139</p>
-                                </div>
-                            </div>
+        <section id="contact" className="luxury-contact-section">
+            <div className="contact-container">
+                <div className="contact-form-wrapper-centered">
+                    {/* Inquiry Form */}
+                    <div className="inquiry-form-card-luxury">
+                        <div className="form-header-luxury">
+                            <h3>Inquire for Availability</h3>
+                            <p>All fields marked with an asterisk are required for a curated response.</p>
                         </div>
-
-                        <div className="contact-hours">
-                            <h4>Visit Us</h4>
-                            <p>Monday - Sunday: 10:00 AM - 5:00 PM</p>
-
-                        </div>
-                    </div>
-
-                    {/* Right Side - Inquiry Form */}
-                    <div className="contact-form-wrapper">
-                        <h3>Book a Visit</h3>
-                        <p className="form-subtitle">Fill in your details and we'll get back to you within 24 hours</p>
 
                         {submitted ? (
-                            <div className="success-message">
-                                <div className="success-icon">✓</div>
-                                <h4>Thank You!</h4>
-                                <p>We've received your inquiry and will contact you shortly.</p>
+                            <div className="form-success-luxury">
+                                <div className="success-icon-gold"></div>
+                                <h4>Inquiry Received</h4>
+                                <p>Our concierge will contact you within 24 hours to discuss your masterpiece event.</p>
                             </div>
                         ) : (
-                            <form onSubmit={handleSubmit} className="contact-form">
-                                <div className="form-group">
+                            <form onSubmit={handleSubmit} className="luxury-form">
+                                <div className="form-group-luxury">
                                     <input
                                         type="text"
                                         name="name"
-                                        placeholder="Your Name *"
+                                        placeholder="Full Name *"
                                         value={formData.name}
                                         onChange={handleChange}
                                         required
-                                        className="form-input"
                                     />
                                 </div>
 
-                                <div className="form-group">
+                                <div className="form-group-luxury">
                                     <input
                                         type="tel"
                                         name="phone"
-                                        placeholder="Phone Number *"
+                                        placeholder="Contact Number *"
                                         value={formData.phone}
                                         onChange={handleChange}
                                         required
-                                        className="form-input"
                                     />
                                 </div>
 
-                                <div className="form-group">
-                                    <select
-                                        name="eventType"
-                                        value={formData.eventType}
-                                        onChange={handleChange}
-                                        required
-                                        className="form-input"
-                                    >
-                                        <option value="">Select Event Type *</option>
-                                        <option value="wedding">Wedding</option>
-                                        <option value="reception">Reception</option>
-                                        <option value="corporate">Corporate Event</option>
-                                        <option value="birthday">Birthday Party</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-
-                                <div className="form-row">
-                                    <div className="form-group">
+                                <div className="form-row-luxury">
+                                    <div className="form-group-luxury">
+                                        <select
+                                            name="eventType"
+                                            value={formData.eventType}
+                                            onChange={handleChange}
+                                            required
+                                        >
+                                            <option value="">Event Type *</option>
+                                            <option value="wedding">Grand Wedding</option>
+                                            <option value="reception">Reception Gala</option>
+                                            <option value="corporate">Executive Corporate</option>
+                                            <option value="other">Bespoke Celebration</option>
+                                        </select>
+                                    </div>
+                                    <div className="form-group-luxury">
                                         <input
                                             type="date"
                                             name="eventDate"
                                             value={formData.eventDate}
                                             onChange={handleChange}
                                             required
-                                            className="form-input"
-                                        />
-                                    </div>
-
-                                    <div className="form-group">
-                                        <input
-                                            type="number"
-                                            name="guestCount"
-                                            placeholder="Guest Count"
-                                            value={formData.guestCount}
-                                            onChange={handleChange}
-                                            className="form-input"
                                         />
                                     </div>
                                 </div>
 
-                                <div className="form-group">
+                                <div className="form-group-luxury">
                                     <textarea
                                         name="message"
-                                        placeholder="Additional Requirements (Optional)"
+                                        placeholder="Tell us about your celebration requirements..."
                                         value={formData.message}
                                         onChange={handleChange}
-                                        rows="4"
-                                        className="form-input"
+                                        rows="3"
                                     ></textarea>
                                 </div>
 
-                                <button type="submit" className="btn btn-primary btn-large">
-                                    Submit Inquiry
+                                <button type="submit" className="btn-luxury-submit">
+                                    Send Inquiry
                                 </button>
                             </form>
                         )}

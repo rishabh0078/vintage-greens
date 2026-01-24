@@ -4,7 +4,7 @@ import './GallerySection.css';
 
 const GallerySection = () => {
     const [activeCategory, setActiveCategory] = useState('all');
-    const [visibleCount, setVisibleCount] = useState(12); // Show 12 images initially
+    const [visibleCount, setVisibleCount] = useState(2); // Show 2 images initially
 
     const categories = [
         { id: 'all', label: 'All Events' },
@@ -75,31 +75,33 @@ const GallerySection = () => {
 
     // Load more images
     const loadMore = () => {
-        setVisibleCount(prev => prev + 12);
+        setVisibleCount(prev => prev + 6);
     };
 
     // Reset visible count when category changes
     const handleCategoryChange = (categoryId) => {
         setActiveCategory(categoryId);
-        setVisibleCount(12); // Reset to show 12 images
+        setVisibleCount(2); // Reset to show 2 images
     };
 
     return (
-        <section className="gallery section">
-            <div className="container">
-                <div className="section-header">
-                    <h2 className="section-title">Our Gallery</h2>
-                    <p className="section-subtitle">
-                        Explore our stunning venue through beautiful moments captured at past events
+        <section className="luxury-gallery-section" id="gallery">
+            <div className="gallery-container">
+                <div className="gallery-header-luxury">
+                    <span className="gallery-pretitle">PORTFOLIO</span>
+                    <h2 className="gallery-main-title">Moments defined by Elegance</h2>
+                    <div className="gallery-divider"></div>
+                    <p className="gallery-description">
+                        A visual journey through the most exquisite celebrations held at Vintage Greens. Each image tells a story of love, joy, and architectural splendor.
                     </p>
                 </div>
 
                 {/* Category Filter */}
-                <div className="gallery-filter">
+                <div className="gallery-filter-luxury">
                     {categories.map(category => (
                         <button
                             key={category.id}
-                            className={`filter - btn ${activeCategory === category.id ? 'active' : ''} `}
+                            className={`filter-link-luxury ${activeCategory === category.id ? 'active' : ''}`}
                             onClick={() => handleCategoryChange(category.id)}
                         >
                             {category.label}
@@ -108,22 +110,24 @@ const GallerySection = () => {
                 </div>
 
                 {/* Gallery Grid */}
-                <div className="gallery-grid">
+                <div className="gallery-grid-luxury">
                     {visibleImages.map(image => (
-                        <div key={image.id} className="gallery-item">
-                            <img
-                                src={image.url}
-                                alt={image.alt}
-                                loading="lazy"
-                                className="gallery-image"
-                                onError={(e) => {
-                                    // If local image fails to load, use fallback
-                                    if (e.target.src !== image.fallback) {
-                                        e.target.src = image.fallback;
-                                    }
-                                }}
-                            />
-                            <div className="gallery-overlay">
+                        <div key={image.id} className="gallery-item-luxury">
+                            <div className="image-wrapper-luxury">
+                                <img
+                                    src={image.url}
+                                    alt={image.alt}
+                                    loading="lazy"
+                                    className="gallery-image-luxury"
+                                    onError={(e) => {
+                                        if (e.target.src !== image.fallback) {
+                                            e.target.src = image.fallback;
+                                        }
+                                    }}
+                                />
+                                <div className="gallery-hover-luxury">
+                                    <span className="hover-category">{image.category}</span>
+                                </div>
                             </div>
                         </div>
                     ))}
@@ -131,13 +135,10 @@ const GallerySection = () => {
 
                 {/* Load More Button */}
                 {hasMore && (
-                    <div className="gallery-load-more">
-                        <button onClick={loadMore} className="btn btn-primary btn-large">
-                            Load More Images
+                    <div className="gallery-footer-luxury">
+                        <button onClick={loadMore} className="btn-luxury-outline">
+                            Discover More
                         </button>
-                        <p className="load-more-text">
-                            Showing {visibleImages.length} of {filteredImages.length} images
-                        </p>
                     </div>
                 )}
             </div>

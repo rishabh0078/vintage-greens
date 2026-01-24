@@ -5,43 +5,42 @@ const HeroSection = () => {
     return (
         <section className="hero">
             <div className="hero-background">
-                {/* Background image will be set via CSS */}
-                <div className="overlay"></div>
+                <img
+                    src="/images/hero/hero-main.jpg?v=2"
+                    alt="Vintage Greens Banquet Hall"
+                    className="hero-bg-image"
+                />
+                <div className="overlay-cinematic"></div>
             </div>
 
             <div className="hero-content">
-                <div className="container">
-                    {/* Minimal top branding */}
-                    <div className="hero-brand fade-in-up">
-                        <span className="brand-name">Vintage Greens</span>
+                <div className="container hero-layout-flex">
+                    {/* SKY ZONE: Utilizes the empty sky above the building */}
+                    <div className="hero-sky-zone reveal-item">
+                        <span className="brand-name">VINTAGE GREENS</span>
+                        <h1 className="hero-main-title">
+                            Where Moments Become <br />
+                            <span className="gold-text">Timeless Memories</span>
+                        </h1>
                     </div>
 
-                    {/* Main content at bottom */}
-                    <div className="hero-bottom">
-                        <div className="hero-text">
-                            <h1 className="hero-title fade-in-up">
-                                Haldwani, Uttarakhand
-                            </h1>
-                            <p className="hero-subtitle fade-in-up">
-                                Where Moments Become Timeless Memories
+                    {/* LAWN ZONE: Utilizes the empty green field below the building */}
+                    <div className="hero-lawn-zone reveal-item">
+                        <div className="hero-actions-container">
+                            <div className="hero-actions">
+                                <a href="#contact" className="btn btn-gold">
+                                    Request Availability
+                                </a>
+                                <a href="tel:+91XXXXXXXXXX" className="btn btn-outline">
+                                    Contact Us
+                                </a>
+                            </div>
+                            <p className="hero-location-text">
+                                Rampur Road • Haldwani
                             </p>
-                        </div>
-
-                        <div className="hero-cta fade-in-up">
-                            <a href="#contact" className="btn btn-primary btn-large">
-                                Book a Visit
-                            </a>
-                            <a href="tel:+919876543210" className="btn btn-secondary btn-large">
-                                Call Now
-                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            {/* Scroll indicator */}
-            <div className="scroll-indicator">
-                <div className="scroll-arrow"></div>
             </div>
         </section>
     );

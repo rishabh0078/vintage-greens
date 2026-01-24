@@ -1,215 +1,187 @@
 /* ===================================
-   LOCATION SECTION - CLEAN BALANCED DESIGN
+   LOCATION SECTION - LUXURY REDESIGN
    =================================== */
 
-.location {
-    background: var(--color-white);
-    padding: var(--space-3xl) 0;
+.luxury-location-section {
+    background-color: var(--color-white);
+    padding: var(--space-4xl) 0;
 }
 
-/* Section Header */
-.location .section-header {
+.location-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.location-header-luxury {
     text-align: center;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto var(--space-3xl);
-}
-
-.location .section-title {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 500;
-    color: var(--color-primary);
-    margin-bottom: var(--space-md);
-    letter-spacing: 0.02em;
-}
-
-.location .section-subtitle {
-    font-size: var(--text-lg);
-    color: var(--color-gray-600);
-    font-weight: 300;
-    line-height: 1.6;
-}
-
-.location-content {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: var(--space-3xl);
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-/* Map Container - Clean Modern */
-.map-container {
+.location-pretitle {
+    font-family: var(--font-roman);
+    font-size: var(--text-xs);
+    letter-spacing: 0.3em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+    text-transform: uppercase;
+}
+
+.location-main-title {
+    font-family: var(--font-roman);
+    font-size: var(--text-3xl);
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+    letter-spacing: 0.05em;
+}
+
+.location-divider {
+    width: 60px;
+    height: 1px;
+    background-color: var(--color-accent);
+    margin-bottom: var(--space-lg);
+}
+
+.location-description {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-lg);
+    color: var(--color-gray-600);
+    line-height: 1.6;
+}
+
+.location-content-luxury {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--space-3xl);
+    align-items: center;
+    margin-top: var(--space-3xl);
+}
+
+.map-wrapper-luxury {
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
     position: relative;
-    width: 100%;
-    height: 550px;
-    background: var(--color-gray-200);
     overflow: hidden;
 }
 
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    filter: grayscale(20%);
-    transition: filter var(--transition-base);
+.map-wrapper-luxury::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 20px solid var(--color-white);
+    pointer-events: none;
 }
 
-.map-container:hover iframe {
-    filter: grayscale(0%);
+.location-info-luxury {
+    padding: var(--space-xl);
 }
 
-/* Location Details - Better Spacing */
-.location-details {
-    padding: var(--space-lg) 0;
-}
-
-.location-details h3 {
-    font-family: var(--font-display);
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    font-weight: 500;
-    color: var(--color-primary);
-    margin-bottom: var(--space-sm);
-    letter-spacing: 0.02em;
-    line-height: 1.2;
-}
-
-/* Address - Clean Layout */
-.address {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-3xl);
-    padding-bottom: var(--space-xl);
-    border-bottom: 1px solid var(--color-gray-200);
-}
-
-.icon {
-    font-size: 1.25rem;
-    flex-shrink: 0;
-    margin-top: 0.125rem;
-    color: var(--color-accent);
-}
-
-.address {
-    font-size: var(--text-base);
-    color: var(--color-gray-600);
-    line-height: 1.6;
-    font-weight: 400;
-}
-
-/* Landmarks - Clean List */
-.landmarks {
+.address-block-luxury {
     margin-bottom: var(--space-2xl);
 }
 
-.landmarks h4 {
-    font-family: var(--font-display);
-    font-size: var(--text-lg);
-    font-weight: 500;
-    color: var(--color-primary);
-    margin-bottom: var(--space-md);
-    letter-spacing: 0.02em;
-}
-
-.landmarks ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
-}
-
-.landmarks li {
-    color: var(--color-gray-600);
-    font-size: var(--text-base);
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-    padding: 0;
-}
-
-.landmarks li::before {
-    content: '✓';
-    color: var(--color-accent);
-    font-weight: 600;
-    font-size: 1rem;
-    flex-shrink: 0;
-}
-
-/* Parking Info - Inline Clean */
-.parking-info {
-    margin-bottom: var(--space-2xl);
-    padding-bottom: var(--space-xl);
-    border-bottom: 1px solid var(--color-gray-200);
-    display: flex;
-    align-items: flex-start;
-    gap: var(--space-sm);
-}
-
-.parking-info h4 {
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    font-weight: 500;
+.estate-name {
+    font-family: var(--font-roman);
+    font-size: var(--text-2xl);
     color: var(--color-primary);
     margin-bottom: var(--space-xs);
-    display: inline;
+    letter-spacing: 0.05em;
 }
 
-.parking-info p {
+.estate-address {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
     color: var(--color-gray-600);
-    font-size: var(--text-sm);
-    margin: 0;
-    line-height: 1.6;
-    display: inline;
+    letter-spacing: 0.02em;
 }
 
-/* CTA Buttons - Stacked */
-.location-cta {
+.proximity-grid-luxury {
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-3xl);
 }
 
-.location-cta .btn {
-    width: 100%;
-    text-align: center;
+.proximity-item {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--color-accent);
+    padding-left: var(--space-md);
 }
 
-/* Responsive Design */
-@media (max-width: 968px) {
-    .location-content {
+.prox-label {
+    font-family: var(--font-roman);
+    font-size: 0.7rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 4px;
+}
+
+.prox-value {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.btn-luxury-primary {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 1.2rem 3rem;
+    font-family: var(--font-roman);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+    border: 1px solid var(--color-primary);
+}
+
+.btn-luxury-primary:hover {
+    background: var(--color-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 1024px) {
+    .location-content-luxury {
         grid-template-columns: 1fr;
-        gap: var(--space-3xl);
-    }
-
-    .map-container {
-        height: 450px;
-    }
-
-    .location-details {
-        padding: 0;
+        gap: var(--space-xl);
     }
 }
 
-@media (max-width: 640px) {
-    .location {
+@media (max-width: 768px) {
+    .luxury-location-section {
         padding: var(--space-3xl) 0;
     }
 
-    .location .section-header {
-        margin-bottom: var(--space-2xl);
-    }
-
-    .map-container {
+    .map-wrapper-luxury iframe {
         height: 350px;
     }
 
-    .location-details h3 {
-        font-size: 1.75rem;
+    .estate-name {
+        font-size: var(--text-xl);
     }
 
-    .landmarks ul {
-        gap: var(--space-xs);
+    .location-main-title {
+        font-size: var(--text-2xl);
+    }
+
+    .btn-luxury-primary {
+        white-space: normal;
+        text-align: center;
+        width: 100%;
+        padding: 1.2rem 1.5rem;
     }
 }

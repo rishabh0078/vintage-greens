@@ -3,69 +3,60 @@ import './LocationSection.css';
 
 const LocationSection = () => {
     return (
-        <section className="location section section-light">
-            <div className="container">
-                <div className="section-header">
-                    <h2 className="section-title">Visit Our Venue</h2>
-                    <p className="section-subtitle">
-                        Centrally located with easy access from all major areas
+        <section className="luxury-location-section" id="location">
+            <div className="location-container">
+                <div className="location-header-luxury">
+                    <span className="location-pretitle">OUR VINTAGE GREENS</span>
+                    <h2 className="location-main-title">A Prime Destination</h2>
+                    <div className="location-divider"></div>
+                    <p className="location-description">
+                        Nestled in the heart of Haldwani, Vintage Greens offers an oasis of tranquility and sophistication with unparalleled accessibility.
                     </p>
                 </div>
 
-                <div className="location-content">
-                    {/* Map */}
-                    <div className="map-container">
+                <div className="location-content-luxury">
+                    <div className="map-wrapper-luxury">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55360.15837814394!2d79.47584!3d29.21453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a09addbd0c86c7%3A0xb9d5e53c0ee9087e!2sHaldwani%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1234567890"
                             width="100%"
-                            height="450"
+                            height="500"
                             style={{ border: 0 }}
                             allowFullScreen=""
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
-                            title="Vintage Greens Location - Haldwani, Uttarakhand"
+                            title="Vintage Greens Location"
                         ></iframe>
                     </div>
 
-                    {/* Location Details */}
-                    <div className="location-details">
-                        <div className="location-info-card">
-                            <h3>Vintage Greens Banquet Hall</h3>
-                            <p className="address">
-                                <span className="icon">📍</span>
-                                Haldwani, Uttarakhand 263139
-                            </p>
+                    <div className="location-info-luxury">
+                        <div className="address-block-luxury">
+                            <h3 className="estate-name">The Vintage Greens</h3>
+                            <p className="estate-address">Rampur Road, Haldwani, Uttarakhand</p>
+                        </div>
 
-                            <div className="landmarks">
-                                <h4>Nearby Landmarks</h4>
-                                <ul>
-                                    <li>5 min from Haldwani Railway Station</li>
-                                    <li>10 min from Kathgodam</li>
-                                    <li>Easy access to Nainital Road</li>
-                                </ul>
+                        <div className="proximity-grid-luxury">
+                            <div className="proximity-item">
+                                <span className="prox-label">Railway Connectivity</span>
+                                <span className="prox-value">5 Minutes from Railway Station</span>
                             </div>
+                            <div className="proximity-item">
+                                <span className="prox-label">Mountain Access</span>
+                                <span className="prox-value">10 Minutes to Kathgodam Gateway</span>
+                            </div>
+                            <div className="proximity-item">
+                                <span className="prox-label">Guest Logistics</span>
+                                <span className="prox-value">Private Valet & Concierge Arrival</span>
+                            </div>
+                        </div>
 
-                            <div className="parking-info">
-                                <span className="icon">🚗</span>
-                                <div>
-                                    <h4>Ample Parking</h4>
-                                    <p>200+ vehicle capacity with valet service</p>
-                                </div>
-                            </div>
-
-                            <div className="location-cta">
-                                <a
-                                    href="https://www.google.com/maps/dir/?api=1&destination=Haldwani+Uttarakhand"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="btn btn-primary"
-                                >
-                                    Get Directions
-                                </a>
-                                <a href="#contact" className="btn btn-secondary">
-                                    Schedule a Visit
-                                </a>
-                            </div>
+                        <div className="location-actions-luxury">
+                            <a
+                                href="https://www.google.com/maps/dir/?api=1&destination=Haldwani+Uttarakhand"
+                                target="_blank"
+                                className="btn-luxury-primary"
+                            >
+                                Navigate to Vintage Greens
+                            </a>
                         </div>
                     </div>
                 </div>

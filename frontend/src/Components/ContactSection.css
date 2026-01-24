@@ -1,229 +1,218 @@
 /* ===================================
-   CONTACT SECTION
+   CONTACT SECTION - LUXURY REDESIGN
    =================================== */
 
-.contact {
-    background: var(--color-white);
-    padding: var(--space-3xl) 0;
+.luxury-contact-section {
+    background-color: var(--color-primary);
+    padding: var(--space-4xl) 0;
+    color: var(--color-white);
 }
 
-.contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: var(--space-3xl);
-    align-items: start;
+.contact-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
 }
 
-/* Contact Info */
-.contact-info h2 {
-    font-size: var(--text-3xl);
+.contact-form-wrapper-centered {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Concierge Info Styling */
+.concierge-info-luxury {
+    padding-top: var(--space-xl);
+}
+
+.concierge-pretitle {
+    font-family: var(--font-roman);
+    font-size: var(--text-xs);
+    letter-spacing: 0.3em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+    display: block;
+}
+
+.concierge-title {
+    font-family: var(--font-roman);
+    font-size: var(--text-4xl);
+    color: var(--color-white);
     margin-bottom: var(--space-md);
-    color: var(--color-primary);
+    letter-spacing: 0.05em;
 }
 
-.contact-description {
-    font-size: var(--text-lg);
-    color: var(--color-gray-600);
+.concierge-divider {
+    width: 80px;
+    height: 1px;
+    background-color: var(--color-accent);
     margin-bottom: var(--space-2xl);
-    line-height: 1.7;
 }
 
-.contact-details {
+.concierge-description {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: var(--text-lg);
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: var(--space-3xl);
+}
+
+.contact-luxury-list {
     display: flex;
     flex-direction: column;
     gap: var(--space-xl);
-    margin-bottom: var(--space-2xl);
 }
 
-.contact-item {
+.contact-luxury-item {
     display: flex;
-    gap: var(--space-md);
-    align-items: flex-start;
+    flex-direction: column;
 }
 
-.contact-icon {
-    font-size: 2rem;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-gray-50);
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-.contact-item h4 {
-    font-size: var(--text-base);
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-bottom: var(--space-xs);
-}
-
-.contact-link {
+.contact-label {
+    font-family: var(--font-roman);
+    font-size: 0.75rem;
     color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+}
+
+.contact-value {
+    font-family: var(--font-roman);
+    font-size: var(--text-base);
+    color: var(--color-white);
     text-decoration: none;
-    font-weight: 500;
+    letter-spacing: 0.05em;
     transition: color var(--transition-base);
 }
 
-.contact-link:hover {
-    color: var(--color-accent-dark);
-    text-decoration: underline;
-}
-
-.contact-text {
-    color: var(--color-gray-600);
-    margin: 0;
-}
-
-.contact-hours {
-    padding: var(--space-lg);
-    background: var(--color-gray-50);
-    border-left: 4px solid var(--color-accent);
-}
-
-.contact-hours h4 {
-    font-size: var(--text-lg);
-    margin-bottom: var(--space-sm);
-}
-
-.contact-hours p {
-    color: var(--color-gray-600);
-    margin-bottom: var(--space-xs);
-    font-size: var(--text-base);
-}
-
-.urgency-text {
+a.contact-value:hover {
     color: var(--color-accent);
-    font-weight: 600;
-    margin-top: var(--space-md);
 }
 
-/* Contact Form */
-.contact-form-wrapper {
-    background: var(--color-gray-50);
-    padding: var(--space-2xl);
-    border: 1px solid var(--color-gray-200);
+/* Inquiry Form Styling */
+.inquiry-form-card-luxury {
+    background: rgba(255, 255, 255, 0.03);
+    padding: var(--space-3xl);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
-.contact-form-wrapper h3 {
-    font-size: var(--text-2xl);
-    margin-bottom: var(--space-sm);
-    color: var(--color-primary);
-}
-
-.form-subtitle {
-    color: var(--color-gray-600);
+.form-header-luxury {
     margin-bottom: var(--space-2xl);
-    font-size: var(--text-base);
 }
 
-.contact-form {
+.form-header-luxury h3 {
+    font-family: var(--font-roman);
+    font-size: var(--text-xl);
+    color: var(--color-white);
+    margin-bottom: var(--space-xs);
+}
+
+.form-header-luxury p {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.luxury-form {
     display: flex;
     flex-direction: column;
     gap: var(--space-lg);
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
+.form-group-luxury {
+    position: relative;
 }
 
-.form-row {
+.form-group-luxury input,
+.form-group-luxury select,
+.form-group-luxury textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 0;
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    transition: all var(--transition-base);
+    border-radius: 0;
+}
+
+.form-group-luxury input:focus,
+.form-group-luxury select:focus,
+.form-group-luxury textarea:focus {
+    outline: none;
+    border-bottom-color: var(--color-accent);
+}
+
+.form-group-luxury input::placeholder,
+.form-group-luxury textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.form-row-luxury {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-lg);
 }
 
-.form-input {
-    padding: 1rem 1.25rem;
-    font-family: var(--font-body);
-    font-size: var(--text-base);
-    border: 2px solid var(--color-gray-300);
-    background: var(--color-white);
+.btn-luxury-submit {
+    background: var(--color-accent);
     color: var(--color-primary);
-    transition: all var(--transition-base);
-    outline: none;
-}
-
-.form-input:focus {
-    border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
-}
-
-.form-input::placeholder {
-    color: var(--color-gray-600);
-}
-
-select.form-input {
+    border: none;
+    padding: 1.2rem;
+    font-family: var(--font-roman);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
     cursor: pointer;
+    transition: all var(--transition-base);
+    margin-top: var(--space-lg);
 }
 
-textarea.form-input {
-    resize: vertical;
-    min-height: 120px;
+.btn-luxury-submit:hover {
+    background: var(--color-white);
+    transform: translateY(-2px);
 }
 
 /* Success Message */
-.success-message {
+.form-success-luxury {
     text-align: center;
-    padding: var(--space-3xl) var(--space-lg);
+    padding: var(--space-2xl) 0;
 }
 
-.success-icon {
-    width: 80px;
-    height: 80px;
-    background: var(--color-accent);
-    color: var(--color-white);
+.success-icon-gold {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--color-accent);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
     margin: 0 auto var(--space-lg);
-    animation: scaleIn 0.5s ease-out;
+    position: relative;
 }
 
-@keyframes scaleIn {
-    from {
-        transform: scale(0);
-    }
-
-    to {
-        transform: scale(1);
-    }
+.success-icon-gold::after {
+    content: 'L';
+    font-family: cursive;
+    font-size: 2rem;
+    color: var(--color-accent);
+    transform: rotate(45deg) scaleX(-1);
+    display: block;
+    line-height: 50px;
 }
 
-.success-message h4 {
-    font-size: var(--text-2xl);
-    color: var(--color-primary);
-    margin-bottom: var(--space-sm);
-}
-
-.success-message p {
-    color: var(--color-gray-600);
-    font-size: var(--text-lg);
-}
-
-/* Responsive */
-@media (max-width: 968px) {
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-        gap: var(--space-2xl);
-    }
-}
-
+/* Mobile Adjustments */
 @media (max-width: 768px) {
-    .contact-form-wrapper {
-        padding: var(--space-lg);
+    .luxury-contact-section {
+        padding: var(--space-3xl) 0;
     }
 
-    .form-row {
+    .inquiry-form-card-luxury {
+        padding: var(--space-xl);
+    }
+
+    .form-row-luxury {
         grid-template-columns: 1fr;
-    }
-
-    .contact-details {
-        gap: var(--space-lg);
     }
 }
