@@ -1,0 +1,215 @@
+/* ===================================
+   LOCATION SECTION - CLEAN BALANCED DESIGN
+   =================================== */
+
+.location {
+    background: var(--color-white);
+    padding: var(--space-3xl) 0;
+}
+
+/* Section Header */
+.location .section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--space-3xl);
+}
+
+.location .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+    letter-spacing: 0.02em;
+}
+
+.location .section-subtitle {
+    font-size: var(--text-lg);
+    color: var(--color-gray-600);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+/* Map Container - Clean Modern */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    background: var(--color-gray-200);
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(20%);
+    transition: filter var(--transition-base);
+}
+
+.map-container:hover iframe {
+    filter: grayscale(0%);
+}
+
+/* Location Details - Better Spacing */
+.location-details {
+    padding: var(--space-lg) 0;
+}
+
+.location-details h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+
+/* Address - Clean Layout */
+.address {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-3xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+    color: var(--color-accent);
+}
+
+.address {
+    font-size: var(--text-base);
+    color: var(--color-gray-600);
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Landmarks - Clean List */
+.landmarks {
+    margin-bottom: var(--space-2xl);
+}
+
+.landmarks h4 {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+    letter-spacing: 0.02em;
+}
+
+.landmarks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.landmarks li {
+    color: var(--color-gray-600);
+    font-size: var(--text-base);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: 0;
+}
+
+.landmarks li::before {
+    content: '✓';
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* Parking Info - Inline Clean */
+.parking-info {
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--color-gray-200);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+}
+
+.parking-info h4 {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+    display: inline;
+}
+
+.parking-info p {
+    color: var(--color-gray-600);
+    font-size: var(--text-sm);
+    margin: 0;
+    line-height: 1.6;
+    display: inline;
+}
+
+/* CTA Buttons - Stacked */
+.location-cta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.location-cta .btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .location-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-3xl);
+    }
+
+    .map-container {
+        height: 450px;
+    }
+
+    .location-details {
+        padding: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .location {
+        padding: var(--space-3xl) 0;
+    }
+
+    .location .section-header {
+        margin-bottom: var(--space-2xl);
+    }
+
+    .map-container {
+        height: 350px;
+    }
+
+    .location-details h3 {
+        font-size: 1.75rem;
+    }
+
+    .landmarks ul {
+        gap: var(--space-xs);
+    }
+}
