@@ -12,7 +12,7 @@ const Footer = () => {
                     <div className="footer-brand-section">
                         <h2 className="footer-roman-title">VINTAGE GREENS</h2>
                         <p className="footer-elegance-text">
-                            A heritage of elegance, crafting timeless celebrations in the heart of Uttarakhand.
+                            A prominent venue specializing in banqueting excellence. Spanning 7 acres with Greek-inspired architecture, 10,000 sq ft air-conditioned banquet hall, and manicured lawns.
                         </p>
                         <div className="footer-social-luxury">
                             <a href="#" className="social-link-luxury">Instagram</a>
@@ -23,31 +23,34 @@ const Footer = () => {
 
                     {/* Navigation */}
                     <div className="footer-nav-section">
-                        <h4 className="footer-small-title">Curation</h4>
+                        <h4 className="footer-small-title">Explore</h4>
                         <ul className="footer-nav-list">
-                            <li><a href="#gallery">Portfolio</a></li>
-                            <li><a href="#location">The Greens</a></li>
-                            <li><a href="#contact">Reservations</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#location">Location</a></li>
+                            <li><a href="#contact">Book Venue</a></li>
                         </ul>
                     </div>
 
                     {/* Offerings */}
                     <div className="footer-nav-section">
-                        <h4 className="footer-small-title">Offerings</h4>
+                        <h4 className="footer-small-title">Events</h4>
                         <ul className="footer-nav-list">
-                            <li>Grand Weddings</li>
-                            <li>Corporate Retails</li>
-                            <li>Bespoke Galas</li>
+                            <li>Wedding Ceremonies</li>
+                            <li>Wedding Receptions</li>
+                            <li>Birthday Parties</li>
+                            <li>Corporate Events</li>
                         </ul>
                     </div>
 
                     {/* Contact */}
                     <div className="footer-nav-section">
-                        <h4 className="footer-small-title">Correspondence</h4>
+                        <h4 className="footer-small-title">Contact</h4>
                         <ul className="footer-nav-list">
-                            <li>+91 99999 00000</li>
-                            <li>concierge@vintagegreens.com</li>
-                            <li>Rampur Road, Haldwani</li>
+                            <li>+91 9917000999</li>
+                            <li>+91 9012121246</li>
+                            <li>info@vintagegreens.com</li>
+                            <li>Rampur Road, Near Maruti Nexa</li>
+                            <li>Haldwani, Uttarakhand 263139</li>
                         </ul>
                     </div>
                 </div>

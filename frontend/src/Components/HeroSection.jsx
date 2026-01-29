@@ -6,7 +6,7 @@ const HeroSection = () => {
         <section className="hero">
             <div className="hero-background">
                 <img
-                    src="/images/hero/hero-main.jpg?v=2"
+                    src="/images/hero/hero-main.png?v=3"
                     alt="Vintage Greens Banquet Hall"
                     className="hero-bg-image"
                 />
@@ -18,20 +18,21 @@ const HeroSection = () => {
                     {/* SKY ZONE */}
                     <div className="hero-sky-zone reveal-item">
                         <span className="brand-name">VINTAGE GREENS</span>
-                        <h1 className="hero-main-title">
-                            Where Moments<br />
-                            Become <span className="gold-text">Timeless</span>
-                        </h1>
                     </div>
 
                     {/* LAWN ZONE: Utilizes the empty green field below the building */}
                     <div className="hero-lawn-zone reveal-item">
                         <div className="hero-actions-container">
+                            <h1 className="hero-tagline-main">
+                                A Prominent Venue Specializing in<br />
+                                <span className="gold-text">Banqueting Excellence</span>
+                            </h1>
+
                             <div className="hero-actions">
                                 <a href="#contact" className="btn btn-gold">
                                     Request Availability
                                 </a>
-                                <a href="tel:+91XXXXXXXXXX" className="btn btn-outline">
+                                <a href="tel:+91 9012121246" className="btn btn-outline">
                                     Contact Us
                                 </a>
                             </div>

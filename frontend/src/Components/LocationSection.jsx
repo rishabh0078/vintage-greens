@@ -27,14 +27,14 @@ const LocationSection = () => {
                 >
                     <div className="map-wrapper-luxury">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55360.15837814394!2d79.47584!3d29.21453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a09addbd0c86c7%3A0xb9d5e53c0ee9087e!2sHaldwani%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1234567890"
+                            src="https://maps.google.com/maps?q=Vintage+Greens+Banquet+Hall+Rampur+Road+Haldwani&t=&z=15&ie=UTF8&iwloc=&output=embed"
                             width="100%"
                             height="500"
                             style={{ border: 0 }}
                             allowFullScreen=""
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
-                            title="Vintage Greens Location"
+                            title="Vintage Greens Location - Rampur Road, Haldwani"
                         ></iframe>
                     </div>
 
@@ -61,8 +61,9 @@ const LocationSection = () => {
 
                         <div className="location-actions-luxury">
                             <a
-                                href="https://www.google.com/maps/dir/?api=1&destination=Haldwani+Uttarakhand"
+                                href="https://www.google.com/maps/dir/?api=1&destination=29.21968,79.51246"
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 className="btn-luxury-primary"
                             >
                                 Navigate to Vintage Greens

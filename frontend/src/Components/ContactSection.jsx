@@ -93,10 +93,11 @@ const ContactSection = () => {
                                             required
                                         >
                                             <option value="">Event Type *</option>
-                                            <option value="wedding">Grand Wedding</option>
-                                            <option value="reception">Reception Gala</option>
-                                            <option value="corporate">Executive Corporate</option>
-                                            <option value="other">Bespoke Celebration</option>
+                                            <option value="wedding-ceremony">Wedding Ceremony</option>
+                                            <option value="wedding-reception">Wedding Reception</option>
+                                            <option value="birthday">Birthday Party</option>
+                                            <option value="party">Party / Celebration</option>
+                                            <option value="event">Corporate / Social Event</option>
                                         </select>
                                     </div>
                                     <div className="form-group-luxury">

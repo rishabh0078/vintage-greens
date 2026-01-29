@@ -1,5 +1,6 @@
 import React from 'react';
 import HeroSection from './Components/HeroSection';
+import AboutSection from './Components/AboutSection';
 import GallerySection from './Components/GallerySection';
 import TestimonialSection from './Components/TestimonialSection';
 import ContactSection from './Components/ContactSection';
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="app">
       <HeroSection />
+      <AboutSection />
       <GallerySection />
       <TestimonialSection />
       <ContactSection />

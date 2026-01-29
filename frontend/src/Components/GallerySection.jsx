@@ -78,7 +78,7 @@ const GallerySection = () => {
 
     // Load more images
     const loadMore = () => {
-        setVisibleCount(prev => prev + 3);
+        setVisibleCount(prev => prev + 3); // Load 3 more images
     };
 
     // Reset visible count when category changes

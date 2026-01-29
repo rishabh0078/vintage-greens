@@ -152,6 +152,57 @@ a.contact-value:hover {
     color: rgba(255, 255, 255, 0.3);
 }
 
+/* Select dropdown specific styling */
+.form-group-luxury select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23C5A059' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.form-group-luxury select option {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 10px;
+}
+
+.form-group-luxury select option:hover,
+.form-group-luxury select option:focus,
+.form-group-luxury select option:checked {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+/* Date input specific styling */
+.form-group-luxury input[type="date"] {
+    position: relative;
+    cursor: pointer;
+}
+
+.form-group-luxury input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+    filter: invert(1);
+    transition: opacity var(--transition-base);
+}
+
+.form-group-luxury input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+/* Style the calendar popup */
+.form-group-luxury input[type="date"]::-webkit-datetime-edit {
+    color: var(--color-white);
+}
+
+.form-group-luxury input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+    color: var(--color-white);
+}
+
 .form-row-luxury {
     display: grid;
     grid-template-columns: 1fr 1fr;

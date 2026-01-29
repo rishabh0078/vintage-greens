@@ -24,17 +24,6 @@
     height: 100%;
     object-fit: cover;
     object-position: center 42%;
-    animation: luxuryZoom 25s ease-out forwards;
-}
-
-@keyframes luxuryZoom {
-    0% {
-        transform: scale(1.05);
-    }
-
-    100% {
-        transform: scale(1);
-    }
 }
 
 /* Subtle gradient - only at edges, building stays clear */
@@ -64,7 +53,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 8vh 4rem 4vh;
+    padding: 3vh 4rem 4vh;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -72,29 +61,19 @@
 /* ===== TOP: BRANDING & HEADLINE ===== */
 .hero-sky-zone {
     text-align: center;
+    padding-top: 1vh;
 }
 
 .brand-name {
     font-family: var(--font-roman);
     color: #fff;
-    font-size: 0.9rem;
-    letter-spacing: 0.5em;
+    font-size: 0.85rem;
+    letter-spacing: 0.6em;
     text-transform: uppercase;
     display: block;
-    margin-bottom: 2rem;
-    font-weight: 700;
+    margin-bottom: 0;
+    font-weight: 600;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
-}
-
-.hero-main-title {
-    color: #fff;
-    font-family: var(--font-roman);
-    font-size: clamp(3rem, 6vw, 5rem);
-    line-height: 1.15;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 400;
-    text-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
 }
 
 .gold-text {
@@ -103,7 +82,7 @@
     font-style: italic;
     font-weight: 400;
     text-transform: none;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.02em;
 }
 
 /* ===== BOTTOM: CONCIERGE BAR - PREMIUM DESKTOP ===== */
@@ -117,9 +96,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1.25rem;
     max-width: 650px;
     width: 100%;
+}
+
+.hero-tagline-main {
+    color: rgba(255, 255, 255, 0.96);
+    font-family: var(--font-body);
+    font-size: clamp(0.88rem, 1.5vw, 1.08rem);
+    line-height: 1.7;
+    text-transform: none;
+    letter-spacing: 0.06em;
+    font-weight: 300;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .hero-actions {
@@ -220,20 +215,19 @@
         white-space: nowrap !important;
     }
 
-    /* HEADLINE - Clean, Premium */
-    .hero-main-title {
-        font-size: 2.5rem !important;
-        line-height: 1.2 !important;
-        letter-spacing: 0.1em !important;
+    /* TAGLINE - Clean, Premium */
+    .hero-tagline-main {
+        font-size: 0.75rem !important;
+        line-height: 1.6 !important;
+        letter-spacing: 0.03em !important;
         font-weight: 400 !important;
-        text-shadow: 0 3px 15px rgba(0, 0, 0, 0.4) !important;
+        max-width: 90% !important;
     }
 
     .gold-text {
         color: #D4AF37 !important;
         font-style: italic !important;
         font-weight: 400 !important;
-        letter-spacing: 0 !important;
     }
 
     /* BUTTONS - Touch friendly but not huge */
