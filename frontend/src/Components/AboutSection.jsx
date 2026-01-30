@@ -66,7 +66,7 @@ const AboutSection = () => {
                             <p>
                                 The <strong>10,000 sq ft centrally air-conditioned</strong> luxurious banquet hall opens to a beautifully landscaped patio, adorned with a statuesque fountain that dazzles when lit at night. The patio further leads to the abode beauty of impeccably manicured landscaped lawns surrounded by vistas of luscious evergreens.
                             </p>
-                            <p>In addition , conveniently located on the property are 10 well furnished air conditioned rooms with private garden and as well as a <strong>25 bed</strong> dormitory .</p>
+                            <p>In addition , conveniently located on the property are 10 well furnished air conditioned rooms with private garden and as well as a <strong>25 bed</strong> dormitory.</p>
                         </div>
 
                         <div className="about-cta-wrapper">
