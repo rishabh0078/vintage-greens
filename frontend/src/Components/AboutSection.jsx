@@ -56,12 +56,17 @@ const AboutSection = () => {
                             </p>
 
                             <p>
+                                Conveniently located on the main State highway Rampur road , it is strategically placed about 4 kms from Haldwani, 15 kms from Udham Singh Nagar and 40 kms from Nainital.
+                            </p>
+
+                            <p>
                                 Make a grand statement by hosting your prestigious events in the landscape of your dreams spread over <strong>7 acres</strong>. Be awed by the huge colossal facade of our stately mansion-like banquet hall inspired by <strong>Greek architectural details</strong>.
                             </p>
 
                             <p>
                                 The <strong>10,000 sq ft centrally air-conditioned</strong> luxurious banquet hall opens to a beautifully landscaped patio, adorned with a statuesque fountain that dazzles when lit at night. The patio further leads to the abode beauty of impeccably manicured landscaped lawns surrounded by vistas of luscious evergreens.
                             </p>
+                            <p>In addition , conveniently located on the property are 10 well furnished air conditioned rooms with private garden and as well as a <strong>25 bed</strong> dormitory .</p>
                         </div>
 
                         <div className="about-cta-wrapper">

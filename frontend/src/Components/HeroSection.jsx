@@ -32,7 +32,7 @@ const HeroSection = () => {
                                 <a href="#contact" className="btn btn-gold">
                                     Request Availability
                                 </a>
-                                <a href="tel:+91 9012121246" className="btn btn-outline">
+                                <a href="tel:+91 9917000999" className="btn btn-outline">
                                     Contact Us
                                 </a>
                             </div>
